@@ -1,0 +1,44 @@
+.container{
+    background-color: #E5E5E5;
+    width: 240px;
+    height: 100vh;
+    
+}
+.item-1{
+    background-color: #fff;
+    margin-top: 60px;
+}
+.item-2{
+    margin-top: 64px;
+}
+
+
+.icon-d{
+    height: 13px;
+}
+
+.item-3{
+    margin-top: 68px;
+    width: 50px;
+}
+.link{
+    color: #4C4C4C;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.link:hover{
+    background: #B4CD93;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#dashboard_text{
+    border-radius: 6px;
+    background: #B4CD93;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
