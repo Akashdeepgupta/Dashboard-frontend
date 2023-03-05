@@ -8,14 +8,16 @@ import Project from "../../assests/projects.png";
 import Sales from "../../assests/sales.png";
 import Setting from "../../assests/setting.png";
 import Logout from "../../assests/logout.png";
-import {NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function Sidebar({children}) {
+
+
   return (
-    <div className="d-flex flex-row">
-      <Nav className="container  flex d-inline-flex flex-column flex-wrap  align-content-center justify-content-start m-2 border border-dark rounded-top">
+    <div className="d-flex  flex-wrap flex-row">
+      <Nav className="container  d-flex d-inline-flex flex-column flex-wrap  align-content-center justify-content-start m-2 border border-dark rounded-top">
         <Nav.Item className="flex-item item-1 ">
-          <NavLink to="#" className="">
+          <NavLink to="/dashboard" className="">
             <Image src={Edviron_logo} />
           </NavLink>
         </Nav.Item>
@@ -24,6 +26,7 @@ function Sidebar({children}) {
             to="/dashboard"
             className="link flex-grow-1"
             id="dashboard_text"
+            activeClassName="active"
           >
             <div className="d-flex flex-row" >
               <div className="flex-grow-0 ">
@@ -40,7 +43,9 @@ function Sidebar({children}) {
             </div>
           </NavLink>
           <div>
-            <NavLink className="link" to="/users"  >
+            <NavLink className="link" to="/users"
+             activeClassName="active"
+              >
               <div className="d-flex flex-row" style={{ marginLeft: "18px" }} >
                 <div >
                   <Image
@@ -53,7 +58,9 @@ function Sidebar({children}) {
               </div>
             </NavLink>
 
-            <NavLink className="link" to="/projects" >
+            <NavLink className="link" to="/projects"
+             activeClassName="active"
+             >
               <div className="d-flex flex-row" style={{ marginLeft: "18px" }}>
                 <div>
                   <Image
@@ -66,7 +73,9 @@ function Sidebar({children}) {
               </div>
             </NavLink>
 
-            <NavLink className="link" to="/sales" >
+            <NavLink className="link" to="/sales"
+             activeClassName="active"
+             >
               <div className="d-flex flex-row" style={{ marginLeft: "18px" }}>
                 <div>
                   <Image
@@ -82,7 +91,9 @@ function Sidebar({children}) {
         </Nav.Item>
 
         <Nav.Item className="flex-item item-3">
-          <NavLink className="link" to="/settings" >
+          <NavLink className="link" to="/settings"
+           activeClassName="active"
+          >
             <div className="d-flex flex-row" style={{ marginLeft: "18px" }}>
               <div>
                 <Image
@@ -114,7 +125,7 @@ function Sidebar({children}) {
           </NavLink>
         </Nav.Item>
       </Nav>
-      <main className="flex-grow-1">{children}</main>
+      <main className="child">{children}</main>
     </div>
   );
 }
